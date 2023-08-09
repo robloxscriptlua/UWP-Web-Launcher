@@ -1,0 +1,24 @@
+{
+  "manifest_version": 3,
+  "name": "UWP Web Launcher",
+  "version": "1.0.0",
+  "description": "Launches the UWP version of Roblox. Created by robloxscriptlua",
+  "permissions": [
+    "activeTab",
+    "tabs"
+  ],
+  "host_permissions": [
+    "*://*.roblox.com/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["https://www.roblox.com/games/*"],
+      "js": ["contentScript.js"]
+    }
+  ],
+  "action": {
+    "default_popup": "popups/popup.html"
+  }
+}
+
+//Don't try skidding
